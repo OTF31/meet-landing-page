@@ -8,13 +8,14 @@ const Button2: FC<Props> = props => {
     bg = "lustyLavender",
     fw = 900,
     radius = "xl",
+    size = "xl",
     styles = { root: { "&:hover": { backgroundColor: "#B18BDD" } } },
     children,
     ...rest
   } = props;
 
   return (
-    <Button {...{ bg, fw, radius, styles }} {...rest}>
+    <Button {...{ bg, fw, radius, size, styles }} {...rest}>
       {children}
     </Button>
   );

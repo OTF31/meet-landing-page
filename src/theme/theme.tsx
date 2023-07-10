@@ -1,6 +1,14 @@
 import { MantineThemeOverride } from "@mantine/core";
 
-export const theme: MantineThemeOverride = {
+import redHatDisplay from "@assets/fonts/RedHatDisplay-VariableFont_wght.ttf";
+
+const theme: MantineThemeOverride = {
+  globalStyles: () => ({
+    "@font-face": {
+      fontFamily: "RedHatDisplay",
+      src: `url(${redHatDisplay}) format("truetype")`,
+    },
+  }),
   breakpoints: { xs: "23.4375em", sm: "48em", xl: "90em" },
   fontFamily: "RedHatDisplay, Ubuntu, sans-serif",
   headings: { fontWeight: 900 },
@@ -91,3 +99,5 @@ export const theme: MantineThemeOverride = {
     ],
   },
 };
+
+export { theme };
